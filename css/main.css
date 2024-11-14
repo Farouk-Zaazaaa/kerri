@@ -1,0 +1,231 @@
+body {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h1 , h2 , h3 , h4 ,h5 , h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --main-color: #E65F78 ;
+    --main-transition : all 0.3s ;
+}
+
+html {
+    scroll-padding-top: 74px;
+}
+
+.bg-section {
+    background-color: #f1f1f1;
+}
+
+.text-pink {
+    color: var(--main-color);
+}
+
+body {
+    height: 2000px;
+}
+
+/* ==========End global styling========== */
+
+
+header {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)) , url(../images/header-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+header .header-content h2 {
+    font-size: 65px;
+    font-weight: 500;
+}
+
+header .header-content h2::after {
+    content: " |";
+
+    animation-name: header-animation ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes header-animation {
+    0% {content: "|";}
+    3% {content: "D|";}
+    5% {content: "De|";}
+    7% {content: "Dev|";}
+    10% {content: "Deve|";}
+    13% {content: "Devel|";}
+    15% {content: "Develo|";}
+    17% {content: "Develop|";}
+    20% {content: "Developm|";}
+    24% {content: "Developme|";}
+    25% {content: "Developmen|";}
+    27% {content: "Development|";}
+    30% {content: "Development|";}
+    32% {content: "Developmen|";}
+    35% {content: "Developme|";}
+    37% {content: "Develop|";}
+    40% {content: "Develo|";}
+    42% {content: "Devel|";}
+    45% {content: "Deve|";}
+    47% {content: "Dev|";}
+    50% {content: "De|";}
+    52% {content: "Des|";}
+    55% {content: "Desi|";}
+    57% {content: "Desig|";}
+    60% {content: "Design|";}
+    62% {content: "Designe|";}
+    65% {content: "Designer|";}
+    67% {content: "Designer|";}
+    70% {content: "Designe|";}
+    72% {content: "Design|";}
+    75% {content: "Desig|";}
+    77% {content: "Desi|";}
+    80% {content: "Des|";}
+    82% {content: "De|";}
+    85% {content: "Dev|";}
+    87% {content: "Deve|";}
+    90% {content: "Devel|";}
+    92% {content: "Develo|";}
+    95% {content: "Develop|";}
+    97% {content: "Develope|";}
+    100% {content: "Developer|";}
+  }
+
+header .header-content button {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+header .header-content button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ==========End Header========== */
+/* ==========Start navbar========== */
+
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* ==========End navbar========== */
+/* ==========Start about========== */
+
+#about .about-text li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 2s ;
+}
+
+#about .about-text li:hover {
+
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    
+}
+
+/* ==========End navbar========== */
+/* ==========Start about========== */
+
+
+.carousel-indicators {
+    bottom: -30px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--main-color);
+    height: 8px;
+    border-radius: 42%;
+}
+
+
+
+
+
+#portfolio .inner img {
+    transition: var(--main-transition);
+}
+#portfolio .inner:hover  img{ 
+    transform: scale(1.5);
+}
+
+#portfolio .inner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: var(--main-transition);
+
+    opacity: 0;
+}
+
+#portfolio .inner:hover::after {
+    opacity: 1;
+}
+
+#portfolio .inner .layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    z-index: 10;
+
+    transition: var(--main-transition);
+}
+
+#portfolio .inner:hover .layer {
+    top: 0;
+}
+
+#portfolio .nav-tabs {
+    border: none;
+}
+
+#portfolio .nav {
+    justify-content: center;
+    margin-block: 20px;
+}
+
+#portfolio .nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #000;
+}
+
+#portfolio .nav-tabs .nav-link.active {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+
+#Contact .my-input input {
+    width: 46%;
+}
+#Contact form button {
+    background-color: var(--main-color);
+    color: #fff;
+}
